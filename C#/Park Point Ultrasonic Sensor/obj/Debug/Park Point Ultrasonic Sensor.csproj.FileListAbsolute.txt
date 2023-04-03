@@ -1,0 +1,11 @@
+D:\HDS Otomasyon\Park Point\Ultrasonic\SDK\C#\Park Point Ultrasonic Sensor\bin\Debug\Park Point Ultrasonic Sensor.exe.config
+D:\HDS Otomasyon\Park Point\Ultrasonic\SDK\C#\Park Point Ultrasonic Sensor\bin\Debug\Park Point Ultrasonic Sensor.exe
+D:\HDS Otomasyon\Park Point\Ultrasonic\SDK\C#\Park Point Ultrasonic Sensor\bin\Debug\Park Point Ultrasonic Sensor.pdb
+D:\HDS Otomasyon\Park Point\Ultrasonic\SDK\C#\Park Point Ultrasonic Sensor\obj\Debug\Park Point Ultrasonic Sensor.csproj.AssemblyReference.cache
+D:\HDS Otomasyon\Park Point\Ultrasonic\SDK\C#\Park Point Ultrasonic Sensor\obj\Debug\Park Point Ultrasonic Sensor.csproj.SuggestedBindingRedirects.cache
+D:\HDS Otomasyon\Park Point\Ultrasonic\SDK\C#\Park Point Ultrasonic Sensor\obj\Debug\Park_Point_Ultrasonic_Sensor.Anasayfa.resources
+D:\HDS Otomasyon\Park Point\Ultrasonic\SDK\C#\Park Point Ultrasonic Sensor\obj\Debug\Park_Point_Ultrasonic_Sensor.Properties.Resources.resources
+D:\HDS Otomasyon\Park Point\Ultrasonic\SDK\C#\Park Point Ultrasonic Sensor\obj\Debug\Park Point Ultrasonic Sensor.csproj.GenerateResource.cache
+D:\HDS Otomasyon\Park Point\Ultrasonic\SDK\C#\Park Point Ultrasonic Sensor\obj\Debug\Park Point Ultrasonic Sensor.csproj.CoreCompileInputs.cache
+D:\HDS Otomasyon\Park Point\Ultrasonic\SDK\C#\Park Point Ultrasonic Sensor\obj\Debug\Park Point Ultrasonic Sensor.exe
+D:\HDS Otomasyon\Park Point\Ultrasonic\SDK\C#\Park Point Ultrasonic Sensor\obj\Debug\Park Point Ultrasonic Sensor.pdb
