@@ -8,7 +8,13 @@ Public Class Anasayfa
         If Comport_Combo.Text = "" Then
             Return False
         End If
+        If SerialPortx.IsOpen Then
+            Return True
+        End If
+
+
         Try
+
             SerialPortx.Close()
             SerialPortx.BaudRate = 38400
             SerialPortx.Parity = IO.Ports.Parity.None
@@ -16,6 +22,7 @@ Public Class Anasayfa
             SerialPortx.DataBits = 8
             SerialPortx.PortName = Comport_Combo.Text
             SerialPortx.Open()
+            Portu_Ac_Buton.Text = "Kapat"
             Return True
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -65,7 +72,7 @@ Public Class Anasayfa
                         Dim Versionx As String = Data.Substring(18, 5)
                         Dim Arr() As String = Versionx.Split(".")
                         Donanim_Versiyon_Label.Text = CInt(Arr(0)) & "." & CInt(Arr(1))
-
+                        Cihaz_Ara_Buton.Text = "Cihaz Ara"
                         MsgBox("Bulunan Cihaz ID: " & CihazID)
 
                     ElseIf Komut = "SM" Then
@@ -109,17 +116,20 @@ Public Class Anasayfa
             If Seriport_Ayarlandi() Then
                 Cihaz_Ara_Timer.Start()
                 CihazAraAktif = True
+                Cihaz_Ara_Buton.Text = "Durdur"
+
             End If
         Else
             CihazAraAktif = False
             Cihaz_Ara_Timer.Stop()
+            Cihaz_Ara_Buton.Text = "Cihaz Ara"
         End If
 
 
 
     End Sub
 
-    Dim ID As Integer
+
 
     Sub Sensor_Durumu_Setle(ByVal SensorDurumu As Integer)
         If SensorDurumu = 0 Then
@@ -128,6 +138,7 @@ Public Class Anasayfa
             Sensor_Rengi_Picturebox.BackColor = Color.Tomato
         End If
     End Sub
+    Dim ID As Integer
     Private Sub Cihaz_Ara_Timer_Tick(sender As Object, e As EventArgs) Handles Cihaz_Ara_Timer.Tick
         Application.DoEvents()
 
@@ -146,6 +157,7 @@ Public Class Anasayfa
             Cihaz_Ara_Timer.Stop()
             TarananID = ""
             CihazAraAktif = False
+            Cihaz_Ara_Buton.Text = "Cihaz Ara"
         End If
 
     End Sub
@@ -229,5 +241,16 @@ Public Class Anasayfa
 
             End If
         End If
+    End Sub
+
+    Private Sub Portu_Ac_Buton_Click(sender As Object, e As EventArgs) Handles Portu_Ac_Buton.Click
+
+        If Portu_Ac_Buton.Text = "Kapat" Then
+            Portu_Ac_Buton.Text = "Aç"
+            SerialPortx.Close()
+        Else
+            Seriport_Ayarlandi()
+        End If
+
     End Sub
 End Class

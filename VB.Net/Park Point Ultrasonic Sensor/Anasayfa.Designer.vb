@@ -58,6 +58,7 @@ Partial Class Anasayfa
         Me.Donanim_Versiyon_Label = New System.Windows.Forms.Label()
         Me.SerialPortx = New System.IO.Ports.SerialPort(Me.components)
         Me.Cihaz_Ara_Timer = New System.Windows.Forms.Timer(Me.components)
+        Me.Portu_Ac_Buton = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.Cihaz_ID_Text, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -77,6 +78,7 @@ Partial Class Anasayfa
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Portu_Ac_Buton)
         Me.GroupBox1.Controls.Add(Me.Yenile_Buton)
         Me.GroupBox1.Controls.Add(Me.Comport_Combo)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
@@ -88,7 +90,7 @@ Partial Class Anasayfa
         '
         'Yenile_Buton
         '
-        Me.Yenile_Buton.Location = New System.Drawing.Point(196, 21)
+        Me.Yenile_Buton.Location = New System.Drawing.Point(207, 21)
         Me.Yenile_Buton.Name = "Yenile_Buton"
         Me.Yenile_Buton.Size = New System.Drawing.Size(75, 32)
         Me.Yenile_Buton.TabIndex = 1
@@ -101,7 +103,7 @@ Partial Class Anasayfa
         Me.Comport_Combo.FormattingEnabled = True
         Me.Comport_Combo.Location = New System.Drawing.Point(12, 24)
         Me.Comport_Combo.Name = "Comport_Combo"
-        Me.Comport_Combo.Size = New System.Drawing.Size(178, 26)
+        Me.Comport_Combo.Size = New System.Drawing.Size(108, 26)
         Me.Comport_Combo.TabIndex = 0
         '
         'GroupBox2
@@ -377,7 +379,7 @@ Partial Class Anasayfa
         '
         'Sensor_Rengi_Picturebox
         '
-        Me.Sensor_Rengi_Picturebox.BackColor = System.Drawing.Color.SpringGreen
+        Me.Sensor_Rengi_Picturebox.BackColor = System.Drawing.Color.White
         Me.Sensor_Rengi_Picturebox.Location = New System.Drawing.Point(12, 19)
         Me.Sensor_Rengi_Picturebox.Name = "Sensor_Rengi_Picturebox"
         Me.Sensor_Rengi_Picturebox.Size = New System.Drawing.Size(259, 34)
@@ -419,6 +421,15 @@ Partial Class Anasayfa
         'Cihaz_Ara_Timer
         '
         Me.Cihaz_Ara_Timer.Interval = 150
+        '
+        'Portu_Ac_Buton
+        '
+        Me.Portu_Ac_Buton.Location = New System.Drawing.Point(126, 21)
+        Me.Portu_Ac_Buton.Name = "Portu_Ac_Buton"
+        Me.Portu_Ac_Buton.Size = New System.Drawing.Size(75, 32)
+        Me.Portu_Ac_Buton.TabIndex = 2
+        Me.Portu_Ac_Buton.Text = "Aç"
+        Me.Portu_Ac_Buton.UseVisualStyleBackColor = True
         '
         'Anasayfa
         '
@@ -494,4 +505,5 @@ Partial Class Anasayfa
     Friend WithEvents Donanim_Versiyon_Label As Label
     Friend WithEvents SerialPortx As IO.Ports.SerialPort
     Friend WithEvents Cihaz_Ara_Timer As Timer
+    Friend WithEvents Portu_Ac_Buton As Button
 End Class
