@@ -25,8 +25,13 @@ namespace Park_Point_Ultrasonic_Sensor
         public bool Seriport_Ayarlandi()
         {
             TarananID = "";
-            if (Comport_Combo.Text == "")
-                return false;
+            if (Comport_Combo.Text == "") return false;
+            if (SerialPortx.IsOpen) return true;
+
+
+
+   
+
             try
             {
                 SerialPortx.Close();
@@ -36,6 +41,7 @@ namespace Park_Point_Ultrasonic_Sensor
                 SerialPortx.DataBits = 8;
                 SerialPortx.PortName = Comport_Combo.Text;
                 SerialPortx.Open();
+                Portu_Ac_Buton.Text = "Kapat";
                 return true;
             }
             catch (Exception ex)
@@ -89,8 +95,8 @@ namespace Park_Point_Ultrasonic_Sensor
                             string Versionx = Data.Substring(18, 5);
                             string[] Arr = Versionx.Split(Convert.ToChar("."));
                             Donanim_Versiyon_Label.Text = Convert.ToInt32(Arr[0]) + "." + Convert.ToInt32(Arr[1]);
-
-                           MessageBox.Show("Bulunan Cihaz ID: " + CihazID);
+                            Cihaz_Ara_Buton.Text = "Cihaz Ara";
+                            MessageBox.Show("Bulunan Cihaz ID: " + CihazID);
                         }
                         else if (Komut == "SM")
                         {
@@ -139,12 +145,14 @@ namespace Park_Point_Ultrasonic_Sensor
                 {
                     Cihaz_Ara_Timer.Start();
                     CihazAraAktif = true;
+                    Cihaz_Ara_Buton.Text = "Durdur";
                 }
             }
             else
             {
                 CihazAraAktif = false;
                 Cihaz_Ara_Timer.Stop();
+                Cihaz_Ara_Buton.Text = "Cihaz Ara";
             }
         }
 
@@ -254,6 +262,25 @@ namespace Park_Point_Ultrasonic_Sensor
                     SerialPortx.Write(GonderilecekKomut);
                 }
             }
+        }
+
+        private void Portu_Ac_Buton_Click(object sender, EventArgs e)
+        {
+
+            if (Portu_Ac_Buton.Text == "Kapat") {
+
+                Portu_Ac_Buton.Text = "Aç";
+            SerialPortx.Close();
+            }
+           
+           else
+            {
+                Seriport_Ayarlandi();
+            }
+            
+      
+
+
         }
     }
 }

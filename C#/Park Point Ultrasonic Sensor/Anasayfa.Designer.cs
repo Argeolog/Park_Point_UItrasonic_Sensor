@@ -64,6 +64,7 @@
             this.Comport_Combo = new System.Windows.Forms.ComboBox();
             this.SerialPortx = new System.IO.Ports.SerialPort(this.components);
             this.Cihaz_Ara_Timer = new System.Windows.Forms.Timer(this.components);
+            this.Portu_Ac_Buton = new System.Windows.Forms.Button();
             this.GroupBox8.SuspendLayout();
             this.GroupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Sensor_Rengi_Picturebox)).BeginInit();
@@ -470,6 +471,7 @@
             // 
             // GroupBox1
             // 
+            this.GroupBox1.Controls.Add(this.Portu_Ac_Buton);
             this.GroupBox1.Controls.Add(this.Yenile_Buton);
             this.GroupBox1.Controls.Add(this.Comport_Combo);
             this.GroupBox1.Location = new System.Drawing.Point(12, 12);
@@ -481,7 +483,7 @@
             // 
             // Yenile_Buton
             // 
-            this.Yenile_Buton.Location = new System.Drawing.Point(196, 21);
+            this.Yenile_Buton.Location = new System.Drawing.Point(207, 21);
             this.Yenile_Buton.Name = "Yenile_Buton";
             this.Yenile_Buton.Size = new System.Drawing.Size(75, 32);
             this.Yenile_Buton.TabIndex = 1;
@@ -495,7 +497,7 @@
             this.Comport_Combo.FormattingEnabled = true;
             this.Comport_Combo.Location = new System.Drawing.Point(12, 24);
             this.Comport_Combo.Name = "Comport_Combo";
-            this.Comport_Combo.Size = new System.Drawing.Size(178, 26);
+            this.Comport_Combo.Size = new System.Drawing.Size(108, 26);
             this.Comport_Combo.TabIndex = 0;
             // 
             // SerialPortx
@@ -506,6 +508,16 @@
             // 
             this.Cihaz_Ara_Timer.Interval = 150;
             this.Cihaz_Ara_Timer.Tick += new System.EventHandler(this.Cihaz_Ara_Timer_Tick);
+            // 
+            // Portu_Ac_Buton
+            // 
+            this.Portu_Ac_Buton.Location = new System.Drawing.Point(126, 21);
+            this.Portu_Ac_Buton.Name = "Portu_Ac_Buton";
+            this.Portu_Ac_Buton.Size = new System.Drawing.Size(75, 32);
+            this.Portu_Ac_Buton.TabIndex = 3;
+            this.Portu_Ac_Buton.Text = "Aç";
+            this.Portu_Ac_Buton.UseVisualStyleBackColor = true;
+            this.Portu_Ac_Buton.Click += new System.EventHandler(this.Portu_Ac_Buton_Click);
             // 
             // Anasayfa
             // 
@@ -584,6 +596,7 @@
         internal System.Windows.Forms.ComboBox Comport_Combo;
         internal System.IO.Ports.SerialPort SerialPortx;
         internal System.Windows.Forms.Timer Cihaz_Ara_Timer;
+        internal System.Windows.Forms.Button Portu_Ac_Buton;
     }
 }
 
